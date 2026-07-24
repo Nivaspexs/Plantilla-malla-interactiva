@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+    <!--
+    Básicamente el tamaño del iframe va dentro de style al igual que su escala, mientras que para implementarlo se hace en el body
+    con la etiqueta <iframe src="" title=""></iframe>
+    -->
+
+<head>
+  <meta charset="UTF-8">
+  <title>Web test - Prueba</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      background-color: #003366; /* Azul universitario */
+      color: white;
+      padding: 15px 20px;
+      border-radius: 6px;
+    }
+    .contenedor-iframe {
+      margin-top: 20px;
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    iframe {
+      width: 100%;
+      height: 1000px;
+      border: none; /* Elimina el borde feo por defecto */
+      /* Escala visual */
+      transform: scale(0.5);    /* 0.8 = 80% del tamaño original */
+      transform-origin: 0 0;    /* Mantiene la esquina superior izquierda fija */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>INELE - test iframe</h1>
+  </header>
+
+  <main class="contenedor-iframe">
+    <h2>Malla interactiva</h2>
+
+    <!-- AQUÍ INSERTAS EL IFRAME CON LA RUTA A TU TO-DO -->
+    <iframe src="index.html" title="Malla interactiva"></iframe>
+
+
+
+  </main>
+
+</body>
+</html>
