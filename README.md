@@ -8,6 +8,15 @@ Propuesta de proyecto de agrupación "IEEE SB UFRO" que consta de la creación d
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
+### Estado del proyecto
+
+Actualmente el proyecto se encuentra en fase temprana teniendo proncipalmente el estilo de la malla de referencia en PDF en HTML.
+La siguiente imagen es la malla en HTML.
+
+![Malla en HTML](images/malla_html.png)
+
+Además se están realizando diseños de base de datos y explorando formas visualmente acordes para visaulizar los pre requisitos de los ramos.
+
 
 ### To-do
 
