@@ -125,6 +125,18 @@ body {
     overflow: hidden;
 }
 
+/* Transición suave para todos los ramos */
+.course-box {
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer; /* Cambia el cursor a manito para indicar interacción */
+}
+
+/* Clase que se aplicará temporalmente al hacer clic */
+.course-box.click-effect {
+  transform: scale(1.05); /* Crece un 5% */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Opcional: una leve sombra para darle realce */
+}
+
 .rama-software {
     background-color: var(--course-rama-software) !important;
 }

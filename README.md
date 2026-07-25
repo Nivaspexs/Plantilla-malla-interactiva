@@ -14,8 +14,9 @@ Propuesta de proyecto de agrupación "IEEE SB UFRO" que consta de la creación d
 - [x] Crear repositorio común
 - [x] Adaptar referencia de malla PDF a HTML inicial
 - [ ] Crear base de datos de los ramos (Puede ser una lista, sqlite, localstorage, etc)
-  - [ ] Rescatar bd de proyecto Cristóbal como base para estándar.
-  - [ ] Programar la bd con la interfaz para que sea fácilmente adaptable a otras carreras.
+  - [ ] Programar funciones CRUD
+  - [ ] Rescatar bd de proyecto Cristóbal como base para estándar
+  - [ ] Programar la bd con la interfaz para que sea fácilmente adaptable a otras carreras
 - [ ] Desarrollar Interactividad básica (como ver info de cada ramo)
   - [ ] Adaptar proyecto para implementar funciones JS
   - [ ] Que las cajas de ramo reaccionen ante el cursor
