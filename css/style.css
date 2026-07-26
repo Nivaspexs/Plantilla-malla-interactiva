@@ -175,6 +175,10 @@ body {
     font-weight: bold;
 }
 
+.extra-outline {
+  pointer-events: none; /* Inmuniza la capa decorativa ante eventos de mouse */
+}
+
 .licenciado-bar {
     background-color: var(--ufro-pink);
     color: white;
@@ -187,12 +191,50 @@ body {
     transform: rotate(180deg);
 }
 
+/* 1. Estado base de la barra */
+.licenciado-bar {
+  /* En lugar de rotate, usamos esta propiedad para que el texto sea vertical */
+  writing-mode: vertical-lr;
+  transform: rotate(180deg); /* Opcional: invierte la dirección de lectura si lo prefieres */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  /* Transición fluida */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+/* 2. Efecto de agrandado */
+.licenciado-bar.click-effect {
+  /* Si usaste el rotate(180deg) arriba, mantenlo aquí junto al scale */
+  transform: rotate(180deg) scale(1.0125);
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 10; /* Eleva la barra para que no quede detrás de los ramos vecinos */
+}
+
 .titulacion-box {
     background-color: var(--course-grey);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
+/* Transición suave para todos los ramos */
+.titulacion-box {
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer; /* Cambia el cursor a manito para indicar interacción */
+}
+
+/* Clase que se aplicará temporalmente al hacer clic */
+.titulacion-box.click-effect {
+  transform: scale(1.0125); /* Crece un 5% */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Opcional: una leve sombra para darle realce */
+}
+
 
 .titulacion-text {
     text-align: center;

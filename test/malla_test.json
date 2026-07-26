@@ -1,0 +1,80 @@
+{
+  "facultad": "Facultad de Ingeniería y Ciencias",
+  "carrera": "Ingeniería Civil Telemática",
+  "malla": {
+    "nivel1": [
+      {
+        "ramo_nombre_html": "Ingeniería<br>y Sociedad",
+        "codigo": "ING050",
+        "sct": 4,
+        "descripcion": "Primer ramo del LIFIC",
+        "pre-requisitos": []
+      },
+      {
+        "ramo_nombre_html": "Fundamentos<br>de Cálculo",
+        "codigo": "IME042",
+        "sct": 6,
+        "descripcion": "Primer ramo sufrimiento",
+        "pre-requisitos": []
+      },
+      {
+        "ramo_nombre_html": "Álgebra",
+        "codigo": "IME043",
+        "sct": 6,
+        "descripcion": "",
+        "pre-requisitos": []
+      },
+      {
+        "ramo_nombre_html": "Introducción<br>a la Química",
+        "codigo": "ICQ011",
+        "sct": 5,
+        "descripcion": "",
+        "pre-requisitos": []
+      },
+      {
+        "ramo_nombre_html": "Habilidades<br>Comunicativas<br>en Ingeniería",
+        "codigo": "DFI052",
+        "sct": 3,
+        "descripcion": "",
+        "pre-requisitos": []
+      }
+    ],
+    "nivel2": [
+      {
+        "ramo_nombre_html": "Introducción<br>al Diseño de<br>Ingeniería",
+        "codigo": "ING101",
+        "sct": 5,
+        "descripcion": "",
+        "pre-requisitos": []
+      },
+      {
+        "ramo_nombre_html": "Cálculo en<br>una Variable",
+        "codigo": "IME044",
+        "sct": 6,
+        "descripcion": "",
+        "pre-requisitos": ["IME042"]
+      },
+      {
+        "ramo_nombre_html": "Matemática<br>para la<br>Computación",
+        "codigo": "IME049",
+        "sct": 4,
+        "descripcion": "",
+        "pre-requisitos": ["IME043"]
+      },
+      {
+        "ramo_nombre_html": "Física I",
+        "codigo": "ICF011",
+        "sct": 6,
+        "descripcion": "",
+        "pre-requisitos": ["IME042"]
+      },
+      {
+        "ramo_nombre_html": "Laboratorio<br>de Ciencias",
+        "codigo": "ING011",
+        "sct": 5,
+        "descripcion": "",
+        "pre-requisitos": ["ICQ011"]
+      }
+    ]
+  }
+}
