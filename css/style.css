@@ -132,9 +132,28 @@ body {
 }
 
 /* Clase que se aplicará temporalmente al hacer clic */
-.course-box.click-effect {
+.course-box.mouseover-effect {
   transform: scale(1.05); /* Crece un 5% */
   box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Opcional: una leve sombra para darle realce */
+}
+
+@keyframes smoothBlurIn {
+  0% {
+    opacity: 0.7;
+    filter: blur(4px);
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: scale(1);
+  }
+}
+
+.course-box.click-effect {
+  /* Mantiene su posición original en el CSS Grid */
+  animation: smoothBlurIn 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  will-change: filter, opacity, transform;
 }
 
 .rama-software {

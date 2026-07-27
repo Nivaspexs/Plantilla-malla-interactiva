@@ -6,18 +6,18 @@
 
   if (courseBox) {
     // Si ya tiene el efecto en curso, no volvemos a activarlo
-    if (courseBox.classList.contains('click-effect')) return;
+    if (courseBox.classList.contains('mouseover-effect')) return;
 
     // 2. Agregamos la clase que agranda el div
-    courseBox.classList.add('click-effect');
+    courseBox.classList.add('mouseover-effect');
 
     // 3. Registramos en la consola
     const nombreCurso = courseBox.querySelector('.course-name')?.innerText.replace(/\n/g, ' ');
-    console.log(`Click en: ${nombreCurso}`);
+    console.log(`Posado en: ${nombreCurso}`);
 
     // 4. Quitamos la clase exacto después de 1 segundo (1000 milisegundos)
     setTimeout(() => {
-      courseBox.classList.remove('click-effect');
+      courseBox.classList.remove('mouseover-effect');
     }, 200);
   }
 });
@@ -32,14 +32,14 @@ document.addEventListener('mouseover', (event) => {
 
   if (barraLicenciatura) {
     // Si ya tiene el efecto en curso, no volvemos a activarlo
-    if (barraLicenciatura.classList.contains('click-effect')) return;
+    if (barraLicenciatura.classList.contains('mouseover-effect')) return;
 
     // 2. Agregamos la clase que agranda el div
-    barraLicenciatura.classList.add('click-effect');
+    barraLicenciatura.classList.add('mouseover-effect');
 
     // 3. Quitamos la clase exacto después de 1 segundo (1000 milisegundos)
     setTimeout(() => {
-      barraLicenciatura.classList.remove('click-effect');
+      barraLicenciatura.classList.remove('mouseover-effect');
     }, 200);
   }
 });
@@ -53,14 +53,15 @@ document.addEventListener('mouseover', (event) => {
 
   if (ramoTitulacion) {
     // Si ya tiene el efecto en curso, no volvemos a activarlo
-    if (ramoTitulacion.classList.contains('click-effect')) return;
+    if (ramoTitulacion.classList.contains('mouseover-effect')) return;
 
     // 2. Agregamos la clase que agranda el div
-    ramoTitulacion.classList.add('click-effect');
+    ramoTitulacion.classList.add('mouseover-effect');
+
 
     // 3. Quitamos la clase exacto después de 1 segundo (1000 milisegundos)
     setTimeout(() => {
-      ramoTitulacion.classList.remove('click-effect');
+      ramoTitulacion.classList.remove('mouseover-effect');
     }, 200);
   }
 });
@@ -133,3 +134,25 @@ function crearRamo(nombre_html, codigo, sct, columna, fila){
   const contenedor = document.querySelector('.curriculum-grid');
   contenedor.appendChild(nuevoDiv);
 }
+
+
+// TEST: Enfocar ramo que se le hace click
+
+document.addEventListener('click', (event) => {
+  const courseBox = event.target.closest('.course-box');
+  if (courseBox) {
+    let idRamo = courseBox.id;
+    console.log(idRamo);
+    if (courseBox.classList.contains('click-effect')) return;
+
+    // 2. Agregamos la clase que agranda el div
+    courseBox.classList.add('click-effect');
+
+    setTimeout(() => {
+      courseBox.classList.remove('click-effect');
+    }, 200);
+
+
+  }
+
+});

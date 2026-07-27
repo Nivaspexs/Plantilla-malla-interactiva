@@ -11,12 +11,10 @@ Propuesta de proyecto de agrupación "IEEE SB UFRO" que consta de la creación d
 
 ### Estado del proyecto
 
-Actualmente el proyecto se encuentra en fase temprana teniendo proncipalmente el estilo de la malla de referencia en PDF en HTML.
-La siguiente imagen es la malla en HTML.
+Actualmente el proyecto se encuentra en fase de experimentación con animaciones y carga de malla interactiva para ramos con pre-requisitos.
 
 ![Malla en HTML](images/malla_html.png)
 
-Además se están realizando diseños de base de datos y explorando formas visualmente acordes para visaulizar los pre requisitos de los ramos.
 
 ### Estructura del proyecto
 
@@ -55,14 +53,16 @@ graph TD
 
 - [x] Crear repositorio común
 - [x] Adaptar referencia de malla PDF a HTML inicial
-- [ ] Crear base de datos de los ramos (Puede ser una lista, sqlite, localstorage, etc)
+- [ ] Crear base de datos de los ramos (Desde JSON)
+  - [x] Rescatar bd de proyecto Cristóbal como base para estándar
+  - [x] Cargar malla desde el JSON 
   - [ ] Programar funciones CRUD
-  - [ ] Rescatar bd de proyecto Cristóbal como base para estándar
-  - [ ] Programar la bd con la interfaz para que sea fácilmente adaptable a otras carreras
-- [ ] Desarrollar Interactividad básica (como ver info de cada ramo)
-  - [ ] Adaptar proyecto para implementar funciones JS
-  - [ ] Que las cajas de ramo reaccionen ante el cursor
+- [ ] Desarrollar Interactividad básica
+  - [x] Adaptar proyecto para implementar funciones JS
+  - [x] Que las cajas de ramo reaccionen ante el cursor
+  - [ ] Agregar info de cada ramo
 - [ ] Implementar Pre-requisitos de cada ramo
+  - [x] Que la bd soporte pre requisitos
   - [ ] Visualizar conexión con ramos pre requisitos.
 - [x] Testear en iFrame para exportar a una web externa
 
@@ -70,6 +70,7 @@ graph TD
 
 - [ ] Agregar diferenciación de ramos Caso Telemática (Ej: Rama electrónica, software, redes, etc...)
   - [ ] Adaptar sub clases de los elementos "course-box"
+- [ ] Agregar que la paleta sea dinámica por Facultad
 
 
 
