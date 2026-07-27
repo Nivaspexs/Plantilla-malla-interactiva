@@ -171,6 +171,7 @@ body {
     background-color: var(--ufro-pink);
     color: white;
     font-size: 9px;
+    text-align: center;
     padding: 3px 0;
     font-weight: bold;
 }

@@ -102,26 +102,15 @@ async function cargarJSON() {
   console.log(clavesMalla[0]);
 
   Object.entries(malla.malla).forEach(([claveNivel, ramos]) => {
-    const numeroColumna = parseInt(claveNivel.match(/\d+/)[0], 10);
+    let numeroColumna = parseInt(claveNivel.match(/\d+/)[0], 10);
+    if (numeroColumna == 9 || numeroColumna == 10) {
+      numeroColumna = numeroColumna + 1;
+    }
     console.log(numeroColumna);
-
     const filaInicial = 3;
     ramos.forEach((ramo, index) => {
       const numeroFila = index + filaInicial;
-      console.log(ramo.ramo_nombre_html);
-      const nuevoDiv = document.createElement('div');
-      nuevoDiv.classList.add('course-box');
-      nuevoDiv.id = ramo.codigo;
-      // Inyectamos la estructura interna
-      nuevoDiv.innerHTML = `
-        <div class="course-name">`+ ramo.ramo_nombre_html +
-        `</div><div class="course-sct">SCT: ` + ramo.sct +`</div>
-      `;
-      nuevoDiv.style.gridColumn = numeroColumna;
-      nuevoDiv.style.gridRow = numeroFila;
-
-      const contenedor = document.querySelector('.curriculum-grid');
-      contenedor.appendChild(nuevoDiv);
+      crearRamo(ramo.ramo_nombre_html, ramo.codigo, ramo.sct, numeroColumna, numeroFila)
 
     });
 
@@ -130,5 +119,17 @@ async function cargarJSON() {
 }
 
 function crearRamo(nombre_html, codigo, sct, columna, fila){
+  const nuevoDiv = document.createElement('div');
+  nuevoDiv.classList.add('course-box');
+  nuevoDiv.id = codigo;
+  // Inyectamos la estructura interna
+  nuevoDiv.innerHTML = `
+    <div class="course-name">`+ nombre_html +
+    `</div><div class="course-sct">SCT: ` + sct +`</div>
+  `;
+  nuevoDiv.style.gridColumn = columna;
+  nuevoDiv.style.gridRow = fila;
 
+  const contenedor = document.querySelector('.curriculum-grid');
+  contenedor.appendChild(nuevoDiv);
 }

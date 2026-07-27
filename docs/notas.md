@@ -106,4 +106,21 @@ Y se posiciona dentro del Grid así:
 
 #### DOM + JSON
 
-El JSON está estructurado que por cada nivel
+El JSON está estructurado que por cada nivel tenga un array de los ramos. El nivel 1 se traduce en la columna 1.
+Esto entra en un forEach y lee cada nivel.
+
+```js
+ Object.entries(malla.malla).forEach(([claveNivel, ramos]) => {
+    const numeroColumna = parseInt(claveNivel.match(/\d+/)[0], 10);
+    console.log(numeroColumna);
+    const filaInicial = 3;
+    ramos.forEach((ramo, index) => {
+      const numeroFila = index + filaInicial;
+      crearRamo(ramo.ramo_nombre_html, ramo.codigo, ramo.sct, numeroColumna, numeroFila)
+
+    });
+
+
+  });
+}
+```
