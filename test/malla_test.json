@@ -11,72 +11,35 @@
         "codigo": "ING050",
         "sct": 4,
         "descripcion": "Primer ramo del LIFIC",
-        "pre-requisitos": []
+        "pre_requisitos": []
       },
       {
         "ramo_nombre_html": "Fundamentos<br>de Cálculo",
         "codigo": "IME042",
         "sct": 6,
         "descripcion": "Primer ramo sufrimiento",
-        "pre-requisitos": []
+        "pre_requisitos": []
       },
       {
         "ramo_nombre_html": "Álgebra",
         "codigo": "IME043",
         "sct": 6,
         "descripcion": "",
-        "pre-requisitos": []
+        "pre_requisitos": []
       },
       {
         "ramo_nombre_html": "Introducción<br>a la Química",
         "codigo": "ICQ011",
         "sct": 5,
         "descripcion": "",
-        "pre-requisitos": []
+        "pre_requisitos": []
       },
       {
         "ramo_nombre_html": "Habilidades<br>Comunicativas<br>en Ingeniería",
         "codigo": "DFI052",
         "sct": 3,
         "descripcion": "",
-        "pre-requisitos": []
-      }
-    ],
-    "nivel2": [
-      {
-        "ramo_nombre_html": "Introducción<br>al Diseño de<br>Ingeniería",
-        "codigo": "ING101",
-        "sct": 5,
-        "descripcion": "",
-        "pre-requisitos": []
-      },
-      {
-        "ramo_nombre_html": "Cálculo en<br>una Variable",
-        "codigo": "IME044",
-        "sct": 6,
-        "descripcion": "",
-        "pre-requisitos": ["IME042"]
-      },
-      {
-        "ramo_nombre_html": "Matemática<br>para la<br>Computación",
-        "codigo": "IME049",
-        "sct": 4,
-        "descripcion": "",
-        "pre-requisitos": ["IME043"]
-      },
-      {
-        "ramo_nombre_html": "Física I",
-        "codigo": "ICF011",
-        "sct": 6,
-        "descripcion": "",
-        "pre-requisitos": ["IME042"]
-      },
-      {
-        "ramo_nombre_html": "Laboratorio<br>de Ciencias",
-        "codigo": "ING011",
-        "sct": 5,
-        "descripcion": "",
-        "pre-requisitos": ["ICQ011"]
+        "pre_requisitos": []
       }
     ],
     "nivel2": [
@@ -85,35 +48,35 @@
             "codigo": "ING101",
             "sct": 5,
             "descripcion": "",
-            "pre-requisitos": []
+            "pre_requisitos": []
           },
           {
             "ramo_nombre_html": "Cálculo en<br>una Variable",
             "codigo": "IME044",
             "sct": 6,
             "descripcion": "",
-            "pre-requisitos": ["IME042"]
+            "pre_requisitos": ["IME042"]
           },
           {
             "ramo_nombre_html": "Matemática<br>para la<br>Computación",
             "codigo": "IME049",
             "sct": 4,
             "descripcion": "",
-            "pre-requisitos": ["IME043"]
+            "pre_requisitos": ["IME043"]
           },
           {
             "ramo_nombre_html": "Física I",
             "codigo": "ICF011",
             "sct": 6,
             "descripcion": "",
-            "pre-requisitos": ["IME042"]
+            "pre_requisitos": ["IME042"]
           },
           {
             "ramo_nombre_html": "Laboratorio<br>de Ciencias",
             "codigo": "ING011",
             "sct": 5,
             "descripcion": "",
-            "pre-requisitos": ["ICQ011"]
+            "pre_requisitos": ["ICQ011"]
           }
         ],
         "nivel3": [
@@ -122,42 +85,42 @@
             "codigo": "ING012",
             "sct": 4,
             "descripcion": "",
-            "pre-requisitos": []
+            "pre_requisitos": []
           },
           {
             "ramo_nombre_html": "Cálculo<br>Multivariable",
             "codigo": "IME085",
             "sct": 5,
             "descripcion": "",
-            "pre-requisitos": ["IME044"]
+            "pre_requisitos": ["IME044"]
           },
           {
             "ramo_nombre_html": "Álgebra Lineal",
             "codigo": "IME086",
             "sct": 5,
             "descripcion": "",
-            "pre-requisitos": ["IME043"]
+            "pre_requisitos": ["IME043"]
           },
           {
             "ramo_nombre_html": "Física II",
             "codigo": "ICF177",
             "sct": 6,
             "descripcion": "",
-            "pre-requisitos": ["IME044", "ICF011"]
+            "pre_requisitos": ["IME044", "ICF011"]
           },
           {
             "ramo_nombre_html": "Electivo de<br>Ingeniería",
             "codigo": "ING400",
             "sct": 3,
             "descripcion": "",
-            "pre-requisitos": []
+            "pre_requisitos": []
           },
           {
             "ramo_nombre_html": "Taller de<br>Programación",
             "codigo": "ICC157",
             "sct": 3,
             "descripcion": "",
-            "pre-requisitos": ["ING011"]
+            "pre_requisitos": ["ING011"]
           }
         ],
         "nivel4": [
@@ -166,42 +129,42 @@
             "codigo": "ING200",
             "sct": 6,
             "descripcion": "",
-            "pre-requisitos": ["ING101", "ING012"]
+            "pre_requisitos": ["ING101", "ING012"]
           },
           {
             "ramo_nombre_html": "Probabilidad y<br>Estadística para<br>Ingeniería",
             "codigo": "IME089",
             "sct": 5,
             "descripcion": "",
-            "pre-requisitos": ["IME085"]
+            "pre_requisitos": ["IME085"]
           },
           {
             "ramo_nombre_html": "Ecuaciones<br>Diferenciales",
             "codigo": "IME087",
             "sct": 6,
             "descripcion": "",
-            "pre-requisitos": ["IME086"]
+            "pre_requisitos": ["IME086"]
           },
           {
             "ramo_nombre_html": "Física III",
             "codigo": "ICF013",
             "sct": 5,
             "descripcion": "",
-            "pre-requisitos": ["IME085", "ICF177"]
+            "pre_requisitos": ["IME085", "ICF177"]
           },
           {
             "ramo_nombre_html": "Estructura de<br>Datos y<br>Algoritmos",
             "codigo": "IIE344",
             "sct": 4,
             "descripcion": "",
-            "pre-requisitos": ["ICC157"]
+            "pre_requisitos": ["ICC157"]
           },
           {
             "ramo_nombre_html": "Electivo de<br>Formación<br>General I",
             "codigo": "I74200",
             "sct": 3,
             "descripcion": "",
-            "pre-requisitos": []
+            "pre_requisitos": []
           }
         ],
         "nivel5": [
@@ -210,42 +173,42 @@
             "codigo": "IIS255",
             "sct": 5,
             "descripcion": "",
-            "pre-requisitos": ["ING101"]
+            "pre_requisitos": ["ING101"]
           },
           {
             "ramo_nombre_html": "Herramientas de<br>Análisis de<br>Señales",
             "codigo": "IIE010",
             "sct": 5,
             "descripcion": "",
-            "pre-requisitos": ["IME087"]
+            "pre_requisitos": ["IME087"]
           },
           {
             "ramo_nombre_html": "Ingeniería<br>Electromagnética",
             "codigo": "IIE219",
             "sct": 6,
             "descripcion": "",
-            "pre-requisitos": ["ICF013"]
+            "pre_requisitos": ["ICF013"]
           },
           {
             "ramo_nombre_html": "Internet y<br>Sistemas<br>Operativos",
             "codigo": "ICC607",
             "sct": 5,
             "descripcion": "",
-            "pre-requisitos": ["ICC157"]
+            "pre_requisitos": ["ICC157"]
           },
           {
             "ramo_nombre_html": "Protocolos de<br>Comunicación y<br>Sistemas Embebidos",
             "codigo": "IIE547",
             "sct": 6,
             "descripcion": "",
-            "pre-requisitos": ["IIE344"]
+            "pre_requisitos": ["IIE344"]
           },
           {
             "ramo_nombre_html": "Electivo de<br>Formación<br>General II",
             "codigo": "I74350",
             "sct": 3,
             "descripcion": "",
-            "pre-requisitos": []
+            "pre_requisitos": []
           }
         ],
         "nivel6": [
@@ -254,42 +217,42 @@
             "codigo": "IIS011",
             "sct": 4,
             "descripcion": "",
-            "pre-requisitos": ["ING200"]
+            "pre_requisitos": ["ING200"]
           },
           {
             "ramo_nombre_html": "Base de Datos",
             "codigo": "ICC011",
             "sct": 4,
             "descripcion": "",
-            "pre-requisitos": ["ICC607"]
+            "pre_requisitos": ["ICC607"]
           },
           {
             "ramo_nombre_html": "Teoría de<br>Información",
             "codigo": "IIE548",
             "sct": 5,
             "descripcion": "",
-            "pre-requisitos": ["IME089"]
+            "pre_requisitos": ["IME089"]
           },
           {
             "ramo_nombre_html": "Electrónica I",
             "codigo": "IIE549",
             "sct": 7,
             "descripcion": "",
-            "pre-requisitos": ["IIE219"]
+            "pre_requisitos": ["IIE219"]
           },
           {
             "ramo_nombre_html": "Programación<br>Avanzada y<br>Aplicaciones Móviles",
             "codigo": "IIE551",
             "sct": 5,
             "descripcion": "",
-            "pre-requisitos": ["IIE344"]
+            "pre_requisitos": ["IIE344"]
           },
           {
             "ramo_nombre_html": "Electivo de<br>Formación<br>General III",
             "codigo": "I74450",
             "sct": 3,
             "descripcion": "",
-            "pre-requisitos": []
+            "pre_requisitos": []
           }
         ],
         "nivel7": [
@@ -298,42 +261,42 @@
             "codigo": "IIS598",
             "sct": 4,
             "descripcion": "",
-            "pre-requisitos": ["IIS255"]
+            "pre_requisitos": ["IIS255"]
           },
           {
             "ramo_nombre_html": "Procesamiento<br>Digital de<br>Señales",
             "codigo": "IIE351",
             "sct": 4,
             "descripcion": "",
-            "pre-requisitos": ["IIE010"]
+            "pre_requisitos": ["IIE010"]
           },
           {
             "ramo_nombre_html": "Sistemas de<br>Comunicaciones",
             "codigo": "IIE588",
             "sct": 5,
             "descripcion": "",
-            "pre-requisitos": ["IIE548"]
+            "pre_requisitos": ["IIE548"]
           },
           {
             "ramo_nombre_html": "Electrónica II",
             "codigo": "IIE665",
             "sct": 6,
             "descripcion": "",
-            "pre-requisitos": ["IIE549"]
+            "pre_requisitos": ["IIE549"]
           },
           {
             "ramo_nombre_html": "Redes de Datos",
             "codigo": "IIE393",
             "sct": 6,
             "descripcion": "",
-            "pre-requisitos": ["IIE547"]
+            "pre_requisitos": ["IIE547"]
           },
           {
             "ramo_nombre_html": "Electivo de<br>Formación<br>General IV",
             "codigo": "I74560",
             "sct": 3,
             "descripcion": "",
-            "pre-requisitos": []
+            "pre_requisitos": []
           }
         ],
         "nivel8": [
@@ -342,35 +305,35 @@
             "codigo": "ING300",
             "sct": 5,
             "descripcion": "",
-            "pre-requisitos": ["IIS011"]
+            "pre_requisitos": ["IIS011"]
           },
           {
             "ramo_nombre_html": "Comunicaciones<br>Digitales",
             "codigo": "IIE668",
             "sct": 5,
             "descripcion": "",
-            "pre-requisitos": ["IIE588"]
+            "pre_requisitos": ["IIE588"]
           },
           {
             "ramo_nombre_html": "Sistemas<br>Digitales",
             "codigo": "IIE669",
             "sct": 6,
             "descripcion": "",
-            "pre-requisitos": ["IIE665"]
+            "pre_requisitos": ["IIE665"]
           },
           {
             "ramo_nombre_html": "Tecnología y<br>Servicios de<br>Internet",
             "codigo": "IIE670",
             "sct": 5,
             "descripcion": "",
-            "pre-requisitos": ["IIE393"]
+            "pre_requisitos": ["IIE393"]
           },
           {
             "ramo_nombre_html": "Tópicos de<br>Ingeniería de<br>Software y<br>Desarrollo Web",
             "codigo": "IIE671",
             "sct": 7,
             "descripcion": "",
-            "pre-requisitos": ["ICC011", "IIE551"]
+            "pre_requisitos": ["ICC011", "IIE551"]
           }
         ],
         "nivel9": [
@@ -379,42 +342,42 @@
                 "codigo": "IIE675",
                 "sct": 5,
                 "descripcion": "",
-                "pre-requisitos": ["IIE669", "IIE671"]
+                "pre_requisitos": ["IIE669", "IIE671"]
               },
               {
                 "ramo_nombre_html": "Comunicaciones<br>Inalámbricas",
                 "codigo": "IIE680",
                 "sct": 5,
                 "descripcion": "",
-                "pre-requisitos": ["IIE670"]
+                "pre_requisitos": ["IIE670"]
               },
               {
                 "ramo_nombre_html": "Electivo de<br>Especialidad I",
                 "codigo": "IIE015",
                 "sct": 4,
                 "descripcion": "",
-                "pre-requisitos": []
+                "pre_requisitos": []
               },
               {
                 "ramo_nombre_html": "Computación en<br>la Nube y<br>Ciberseguridad",
                 "codigo": "IIE687",
                 "sct": 4,
                 "descripcion": "",
-                "pre-requisitos": ["IIE670"]
+                "pre_requisitos": ["IIE670"]
               },
               {
                 "ramo_nombre_html": "Electivo de<br>Especialidad II",
                 "codigo": "IIE016",
                 "sct": 4,
                 "descripcion": "",
-                "pre-requisitos": []
+                "pre_requisitos": []
               },
               {
                 "ramo_nombre_html": "Internet de las<br>Cosas y Computación<br>en el Borde",
                 "codigo": "IIE710",
                 "sct": 6,
                 "descripcion": "",
-                "pre-requisitos": ["IIE669", "IIE671"]
+                "pre_requisitos": ["IIE669", "IIE671"]
               }
             ],
             "nivel10": [
@@ -423,7 +386,7 @@
                 "codigo": "ING500",
                 "sct": 5,
                 "descripcion": "",
-                "pre-requisitos": [
+                "pre_requisitos": [
                   "ING050", "IME042", "IME043", "ICQ011", "DFI052",
                   "ING101", "IME044", "IME049", "ICF011", "ING011",
                   "ING012", "IME085", "IME086", "ICF177", "ING400",
@@ -435,35 +398,35 @@
                 "codigo": "IIE698",
                 "sct": 5,
                 "descripcion": "",
-                "pre-requisitos": ["IIE668"]
+                "pre_requisitos": ["IIE668"]
               },
               {
                 "ramo_nombre_html": "Electivo de<br>Especialidad III",
                 "codigo": "IIE017",
                 "sct": 4,
                 "descripcion": "",
-                "pre-requisitos": []
+                "pre_requisitos": []
               },
               {
                 "ramo_nombre_html": "Electivo de<br>Especialidad IV",
                 "codigo": "IIE018",
                 "sct": 4,
                 "descripcion": "",
-                "pre-requisitos": []
+                "pre_requisitos": []
               },
               {
                 "ramo_nombre_html": "Gestión de<br>Proyectos TI",
                 "codigo": "IIE693",
                 "sct": 4,
                 "descripcion": "",
-                "pre-requisitos": ["IIE675"]
+                "pre_requisitos": ["IIE675"]
               },
               {
                 "ramo_nombre_html": "Ética Profesional",
                 "codigo": "IIE720",
                 "sct": 3,
                 "descripcion": "",
-                "pre-requisitos": ["IIE675"]
+                "pre_requisitos": ["IIE675"]
               }
             ]
   }

@@ -107,11 +107,11 @@ async function cargarJSON() {
     if (numeroColumna == 9 || numeroColumna == 10) {
       numeroColumna = numeroColumna + 1;
     }
-    console.log(numeroColumna);
     const filaInicial = 3;
     ramos.forEach((ramo, index) => {
+      console.log(ramo.pre_requisitos);
       const numeroFila = index + filaInicial;
-      crearRamo(ramo.ramo_nombre_html, ramo.codigo, ramo.sct, numeroColumna, numeroFila)
+      crearRamo(ramo.ramo_nombre_html, ramo.codigo, ramo.sct, ramo.pre_requisitos, numeroColumna, numeroFila)
 
     });
 
@@ -119,10 +119,17 @@ async function cargarJSON() {
   });
 }
 
-function crearRamo(nombre_html, codigo, sct, columna, fila){
+//TEST: Funcion para crear div del ramo
+//
+// Falta agregar una referencia hacia los pre requisitos
+
+function crearRamo(nombre_html, codigo, sct,prerequisitos, columna, fila){
   const nuevoDiv = document.createElement('div');
   nuevoDiv.classList.add('course-box');
   nuevoDiv.id = codigo;
+  nuevoDiv.dataset.prerequisitos = prerequisitos.join(',');
+  console.log(nuevoDiv.dataset.prerequisitos);
+
   // Inyectamos la estructura interna
   nuevoDiv.innerHTML = `
     <div class="course-name">`+ nombre_html +
@@ -137,22 +144,65 @@ function crearRamo(nombre_html, codigo, sct, columna, fila){
 
 
 // TEST: Enfocar ramo que se le hace click
+//
+//  TEST: Ahora recalca de forma visual (BETA) los pre-requisitos, sin embargo
+//  no es recursivo.
 
 document.addEventListener('click', (event) => {
   const courseBox = event.target.closest('.course-box');
   if (courseBox) {
     let idRamo = courseBox.id;
-    console.log(idRamo);
     if (courseBox.classList.contains('click-effect')) return;
 
     // 2. Agregamos la clase que agranda el div
-    courseBox.classList.add('click-effect');
+
+    let listaPrerequisitos = listRamosByPrequesitos(courseBox.dataset.prerequisitos);
+
+    listaPrerequisitos.forEach((courseBox, indice) => {
+
+      courseBox.classList.add('click-effect');
+    });
 
     setTimeout(() => {
-      courseBox.classList.remove('click-effect');
+      document.querySelectorAll('.course-box').forEach(div => div.classList.remove('click-effect'));
     }, 200);
 
 
   }
 
 });
+
+// TEST: Devolver lista de courseBox por lista prereqs
+
+function listRamosByPrequesitos(prerequisitos, acumulador = new Set()) {
+  const listaCodigos = prerequisitos ? prerequisitos.split(',') : [];
+
+  listaCodigos.forEach(id => {
+    // Caso base / Protección: Evitamos buscar si el ID está vacío o si ya lo procesamos
+    if (!id || acumulador.has(id)) return;
+
+    const ramoCourseBox = findRamoById(id);
+
+    if (ramoCourseBox) {
+      // 1. Guardamos el elemento encontrado
+      acumulador.add(ramoCourseBox);
+
+      // 2. LEER LOS PRERREQUISITOS DEL RAMO QUE ACABAMOS DE ENCONTRAR
+      const prereqsDeEsteRamo = ramoCourseBox.dataset.prerequisitos;
+
+      // 3. LLAMADA RECURSIVA: La función se llama a sí misma para ir más atrás
+      listRamosByPrequesitos(prereqsDeEsteRamo, acumulador);
+    }
+  });
+
+  // Convertimos el Set de vuelta a un Arreglo estándar
+  for (let item of acumulador) console.log("Lista: "+item.dataset.prerequisitos);
+  return Array.from(acumulador);
+}
+
+// TEST: Encontrar course-box por ID
+
+function findRamoById(idRamo) {
+  const courseBox = document.getElementById(idRamo);
+  return courseBox;
+}

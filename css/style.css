@@ -228,7 +228,7 @@ body {
 }
 
 /* 2. Efecto de agrandado */
-.licenciado-bar.click-effect {
+.licenciado-bar.mouseover-effect {
   /* Si usaste el rotate(180deg) arriba, mantenlo aquí junto al scale */
   transform: rotate(180deg) scale(1.0125);
 
@@ -250,7 +250,7 @@ body {
 }
 
 /* Clase que se aplicará temporalmente al hacer clic */
-.titulacion-box.click-effect {
+.titulacion-box.mouseover-effect {
   transform: scale(1.0125); /* Crece un 5% */
   box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Opcional: una leve sombra para darle realce */
 }
