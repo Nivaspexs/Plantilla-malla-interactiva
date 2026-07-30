@@ -2,6 +2,12 @@
 
 Propuesta de proyecto de agrupación "IEEE SB UFRO" que consta de la creación de mallas interactivas para INELE.
 
+## Tecnologías utilizadas
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
 ## Manual de uso
 Para empezar debes clonar el repositorio:
 ```
@@ -16,13 +22,13 @@ A preferencia puedes ocupar live-server desde vs-code o iniciar live-server desd
 npx live-server
 ```
 
-Ahora, para probar el test iniciado el live-server accede a:
+Ahora, para probar el test, que tiene funcionalidades beta, accede al live-server con la siguiente ruta:
 
 ```
 http://127.0.0.1:8080/test/index_test.html
 ```
 
-### Adaptar malla a otras carreras
+### Importar malla de otras carreras
 
 Para importar la malla de otras carreras, se debe modificar el JSON en 'data/malla.json' siguiendo la estructura:
 
@@ -52,7 +58,7 @@ En 'data/malla.json' hay una plantilla/ejemplo utilizando la carrera de ICT, ¡P
 }
 ```
 
-### Cómo agregar malla como iFrame: Ejemplo
+### Cómo agregar "Malla interactiva" como iFrame: Ejemplo
 
 En la carpeta 'test/' existe un ejemplo en HTML donde se incluye la malla como un iframe.
 Puedes acceder al ejemplo accediendo a:
@@ -60,13 +66,6 @@ Puedes acceder al ejemplo accediendo a:
 ```
 http://127.0.0.1:8080/test/iframe_test.html
 ```
-
-
-## Tecnologías utilizadas
-
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 
 ### Estado del proyecto

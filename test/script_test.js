@@ -91,12 +91,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function cargarJSON() {
   //Carga el JSON
-  const respuesta = await fetch('malla_test.json');
+  const respuesta = await fetch('../data/malla.json');
 
   //Aqui convierte el JSON a objeto automáticamente
   const malla = await respuesta.json();
   console.log(malla.malla);
 
+  //Cambiar encabezados y titulo
+  /*
+  <div class="header-text">
+      <h1>INGENIERÍA CIVIL TELEMÁTICA</h1>
+      <h2>FACULTAD DE INGENIERÍA Y CIENCIAS</h2>
+      <h3>UNIVERSIDAD DE LA FRONTERA</h3>
+  </div> */
+  document.title = "Malla Curricular - " + malla.carrera;
+  const carrera = document.querySelector('.header-text h1');
+  carrera.textContent = malla.carrera.toUpperCase();
+
+  const facultad = document.querySelector('.header-text h2');
+  facultad.textContent = malla.facultad.toUpperCase();
   // Carga un array de Strings de las Keys, pero es un objeto así que a los
   // nombres de los parámetros
   const clavesMalla = Object.keys(malla.malla);

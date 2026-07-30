@@ -22,6 +22,21 @@ async function cargarJSON() {
   const malla = await respuesta.json();
   console.log(malla.malla);
 
+  //Cambiar encabezados y titulo
+  /*
+  <div class="header-text">
+      <h1>INGENIERÍA CIVIL TELEMÁTICA</h1>
+      <h2>FACULTAD DE INGENIERÍA Y CIENCIAS</h2>
+      <h3>UNIVERSIDAD DE LA FRONTERA</h3>
+  </div> */
+  document.title = "Malla Curricular - " + malla.carrera;
+  const carrera = document.querySelector('.header-text h1');
+  carrera.textContent = malla.carrera.toUpperCase();
+
+  const facultad = document.querySelector('.header-text h2');
+  facultad.textContent = malla.facultad.toUpperCase();
+
+
 
   Object.entries(malla.malla).forEach(([claveNivel, ramos]) => {
     let numeroColumna = parseInt(claveNivel.match(/\d+/)[0], 10);
