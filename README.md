@@ -2,7 +2,67 @@
 
 Propuesta de proyecto de agrupación "IEEE SB UFRO" que consta de la creación de mallas interactivas para INELE.
 
-### Tecnologías utilizadas
+## Manual de uso
+Para empezar debes clonar el repositorio:
+```
+git clone https://github.com/Nivaspexs/Plantilla-malla-interactiva.git
+```
+
+Para probar la malla interactiva puedes simplemente abrir el "index.html" con tu browser.
+
+A preferencia puedes ocupar live-server desde vs-code o iniciar live-server desde la terminal (en la carpeta del proyecto) utilizando npx:
+
+```npx
+npx live-server
+```
+
+Ahora, para probar el test iniciado el live-server accede a:
+
+```
+http://127.0.0.1:8080/test/index_test.html
+```
+
+### Adaptar malla a otras carreras
+
+Para importar la malla de otras carreras, se debe modificar el JSON en 'data/malla.json' siguiendo la estructura:
+
+Los ramos se introducen en los niveles (se debe seguir el nombre "nivelN°"), los niveles van a su vez en malla.
+
+Los ramos tienen nombre en html para acomodarse a la interfaz, tiene código para identificarse, SCT, una descripción y los pre requisitos para relacionar los ramos.
+
+En 'data/malla.json' hay una plantilla/ejemplo utilizando la carrera de ICT, ¡Prueba agregando otros ramos!
+
+```json
+{
+  "facultad": "Facultad de Ingeniería y Ciencias",
+  "carrera: "Ingeniería Civil Telemática",
+  "paletaColores":[],
+  "malla":{
+    "nivel1":
+    [
+      {
+      "ramo_nombre_html": "Ingeniería<br>y Sociedad",
+      "codigo":"ING050", 
+      "sct": 4   ,
+      "descripcion": "Primer ramo del LIFIC",
+      "pre-requisitos": []
+      }
+    ]
+  }
+}
+```
+
+### Cómo agregar malla como iFrame: Ejemplo
+
+En la carpeta 'test/' existe un ejemplo en HTML donde se incluye la malla como un iframe.
+Puedes acceder al ejemplo accediendo a:
+
+```
+http://127.0.0.1:8080/test/iframe_test.html
+```
+
+
+## Tecnologías utilizadas
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)

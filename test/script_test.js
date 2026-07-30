@@ -120,8 +120,7 @@ async function cargarJSON() {
 }
 
 //TEST: Funcion para crear div del ramo
-//
-// Falta agregar una referencia hacia los pre requisitos
+
 
 function crearRamo(nombre_html, codigo, sct,prerequisitos, columna, fila){
   const nuevoDiv = document.createElement('div');
