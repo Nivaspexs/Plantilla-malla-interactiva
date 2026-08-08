@@ -397,8 +397,8 @@ body {
         .info-panel {
             position: fixed;
             top: 0;
-            right: -400px; /* Oculto por defecto */
-            width: 350px;
+            right: -100%; /* Oculto por defecto */
+            width: 22.5%;
             height: 100vh;
             background-color: white;
             box-shadow: -4px 0 15px rgba(0,0,0,0.15);
