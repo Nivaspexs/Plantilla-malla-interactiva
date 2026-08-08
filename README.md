@@ -112,24 +112,28 @@ graph TD
 
 - [x] Crear repositorio común
 - [x] Adaptar referencia de malla PDF a HTML inicial
-- [ ] Crear base de datos de los ramos (Desde JSON)
+- [x] Crear base de datos de los ramos (Desde JSON)
   - [x] Rescatar bd de proyecto Cristóbal como base para estándar
   - [x] Cargar malla desde el JSON 
-  - [ ] Programar funciones CRUD
-- [ ] Desarrollar Interactividad básica
+- [x] Desarrollar Interactividad básica
   - [x] Adaptar proyecto para implementar funciones JS
   - [x] Que las cajas de ramo reaccionen ante el cursor
-  - [ ] Agregar info de cada ramo
-- [ ] Implementar Pre-requisitos de cada ramo
+  - [x] Agregar info de cada ramo
+- [x] Implementar Pre-requisitos de cada ramo
   - [x] Que la bd soporte pre requisitos
-  - [ ] Visualizar conexión con ramos pre requisitos.
+  - [x] Visualizar conexión con ramos pre requisitos.
 - [x] Testear en iFrame para exportar a una web externa
+- [ ] Probar animaciones y estéticas apropiadas
+- [ ] Hacer refactor del código
 
 #### Opcionales
 
 - [ ] Agregar diferenciación de ramos Caso Telemática (Ej: Rama electrónica, software, redes, etc...)
   - [ ] Adaptar sub clases de los elementos "course-box"
 - [ ] Agregar que la paleta sea dinámica por Facultad
+
+### Planes a futuro
+- Adaptar interfaz para móviles
 
 
 

@@ -150,6 +150,7 @@ body {
   }
 }
 
+/*  Clase con animación    */
 .course-box.click-effect {
   /* Mantiene su posición original en el CSS Grid */
   animation: smoothBlurIn 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
@@ -268,7 +269,7 @@ body {
 .extra-outline {
     border: 3px solid var(--ufro-pink);
     border-bottom: none;
-    z-index: 0;
+    z-index: 150; /* Aumentado para que flote sobre los course-boxes */
 }
 
 .extra-vertical-text {
@@ -362,4 +363,9 @@ body {
 
 .contact-info strong {
     font-size: 16px;
+}
+
+/* LeaderLine Z-Index Fix para que las líneas estén siempre por encima de la malla */
+.leader-line {
+    z-index: 9999 !important;
 }
