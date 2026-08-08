@@ -4,91 +4,6 @@
     <meta charset="UTF-8">
     <title>Malla Curricular - Ingeniería Civil Telemática</title>
     <link rel="stylesheet" href="../css/style.css">
-    <style>
-        /* Las líneas quedan en una capa intermedia */
-        .leader-line, .leader-line * {
-            z-index: 50 !important;
-            pointer-events: none !important;
-        }
-
-        /* Estilo elegante para resaltar pre-requisitos */
-        .course-box {
-            position: relative; /* Necesario para que funcione z-index */
-            z-index: 100; /* Por defecto sobre las líneas */
-            transition: all 0.4s ease !important; /* Suavidad en la animación */
-        }
-
-        .course-box.dimmed {
-            z-index: 10; /* Los desenfocados se van al fondo (por debajo de las líneas) */
-            opacity: 0.25 !important;
-            filter: grayscale(90%) blur(1px) !important;
-            transform: scale(0.95) !important;
-        }
-
-        /* Panel Lateral de Descripción */
-        .info-panel {
-            position: fixed;
-            top: 0;
-            right: -400px; /* Oculto por defecto */
-            width: 350px;
-            height: 100vh;
-            background-color: white;
-            box-shadow: -4px 0 15px rgba(0,0,0,0.15);
-            z-index: 100000; /* Sobre todo */
-            transition: right 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-            padding: 40px 30px;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        .info-panel.open {
-            right: 0;
-        }
-        .info-panel h2 {
-            margin-top: 0;
-            color: #333;
-            font-size: 22px;
-            line-height: 1.3;
-        }
-        .panel-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 20px;
-        }
-        .info-panel .sct-badge {
-            background-color: #e91e63;
-            color: white;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: bold;
-        }
-        .info-panel .prereq-badge {
-            background-color: #607d8b;
-            color: white;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: bold;
-        }
-        .info-panel p {
-            color: #555;
-            line-height: 1.6;
-            font-size: 15px;
-        }
-        .close-btn {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            cursor: pointer;
-            font-size: 28px;
-            color: #aaa;
-            transition: color 0.2s;
-        }
-        .close-btn:hover { color: #333; }
-    </style>
 </head>
 <body>
 
@@ -105,101 +20,105 @@
                 <h3>UNIVERSIDAD DE LA FRONTERA</h3>
             </div>
         </header>
+        <!-- CONTENEDOR DE CONTENIDO SIN TÍTULO DE LA MALLA -->
+        <div class="contenedor-sin-titulo">
+            <!-- Contenedor de la información acerca de las SCT -->
+            <div class="sct-subtitle">EXPRESADO EN SISTEMA DE CRÉDITOS TRANSFERIBLES (SCT)</div>    
+            <!-- comentario: pordriamos agregar conexión a alguna página que explique qué son las SCT-->
 
-        <div class="sct-subtitle">EXPRESADO EN SISTEMA DE CRÉDITOS TRANSFERIBLES (SCT)</div>
-
-        <!-- Curriculum Grid -->
-        <div class="curriculum-grid">
-            <!-- Year Headers -->
-            <div class="year-header" style="grid-column: 1 / 3; grid-row: 1;">PRIMER AÑO</div>
-            <div class="year-header" style="grid-column: 3 / 5; grid-row: 1;">SEGUNDO AÑO</div>
-            <div class="year-header" style="grid-column: 5 / 7; grid-row: 1;">TERCER AÑO</div>
-            <div class="year-header" style="grid-column: 7 / 9; grid-row: 1;">CUARTO AÑO</div>
-            <div class="year-header" style="grid-column: 10 / 12; grid-row: 1;">QUINTO AÑO</div>
-            <div class="year-header" style="grid-column: 12 / 13; grid-row: 1;">SEXTO AÑO</div>
-
-            <!-- Level Headers -->
-            <div class="level-header" style="grid-column: 1; grid-row: 2;">NIVEL 1</div>
-            <div class="level-header" style="grid-column: 2; grid-row: 2;">NIVEL 2</div>
-            <div class="level-header" style="grid-column: 3; grid-row: 2;">NIVEL 3</div>
-            <div class="level-header" style="grid-column: 4; grid-row: 2;">NIVEL 4</div>
-            <div class="level-header" style="grid-column: 5; grid-row: 2;">NIVEL 5</div>
-            <div class="level-header" style="grid-column: 6; grid-row: 2;">NIVEL 6</div>
-            <div class="level-header" style="grid-column: 7; grid-row: 2;">NIVEL 7</div>
-            <div class="level-header" style="grid-column: 8; grid-row: 2;">NIVEL 8</div>
-            <div class="level-header" style="grid-column: 10; grid-row: 2;">NIVEL 9</div>
-            <div class="level-header" style="grid-column: 11; grid-row: 2;">NIVEL 10</div>
-            <div class="level-header" style="grid-column: 12; grid-row: 2;">NIVEL 11</div>
-
-
-            <!-- Licenciado vertical bar -->
-            <div class="licenciado-bar" style="grid-column  : 9; grid-row: 3 / 9;">
-                LICENCIADO EN CIENCIAS DE LA INGENIERÍA**
-            </div>
-
-            <!-- Nivel 11: Actividad de Titulación -->
-            <div class="titulacion-box" style="grid-column: 12; grid-row: 3 / 14;">
-                <div class="titulacion-text">Actividad de<br>Titulación</div>
-                <div class="course-sct">SCT: 29</div>
-            </div>
-
-            <!-- EXTRACURRICULAR AREA -->
-
-            <!-- Pink Outline for Extracurricular -->
-            <div class="extra-outline" style="grid-column: 1 / 12; grid-row: 10 / 14;"></div>
-
-            <!-- Vertical Text -->
-            <div class="extra-vertical-text" style="grid-column: 1 / 3; grid-row: 10 / 13;">
-                ACTIVIDADES EXTRACURRICULARES<br>SIN EXPRESIÓN INTRA-AULA
-            </div>
-
-            <!-- Extracurricular Row 1 (Row 10) -->
-            <div class="course-box extra-course" style="grid-column: 3 / 5; grid-row: 10;">
-                <div class="course-name">Inglés<br>Principiante</div>
-            </div>
-            <div class="course-box extra-course" style="grid-column: 5; grid-row: 10;">
-                <div class="course-name">Inglés<br>Básico</div>
-            </div>
-            <div class="course-box extra-course" style="grid-column: 6; grid-row: 10;">
-                <div class="course-name">Inglés<br>Preintermedio</div>
-            </div>
-            <div class="course-box extra-course" style="grid-column: 7; grid-row: 10;">
-                <div class="course-name">Inglés<br>Intermedio</div>
-            </div>
-            <div class="course-box extra-course" style="grid-column: 8; grid-row: 10;">
-                <div class="course-name">Práctica de<br>Estudios I*</div>
-                <div class="course-sct">SCT: 6</div>
-            </div>
-            <div class="course-box extra-course" style="grid-column: 11; grid-row: 10;">
-                <div class="course-name">Práctica de<br>Estudios II*</div>
-                <div class="course-sct">SCT: 6</div>
-            </div>
-
-            <!-- Extracurricular Row 2 (Row 11) -->
-            <div class="course-box extra-course" style="grid-column: 8; grid-row: 11;">
-                <div class="course-name">Examen de<br>Suficiencia Inglés</div>
-                <div class="course-sct">SCT: 12</div>
-            </div>
-            <div class="course-box extra-course" style="grid-column: 11; grid-row: 11;">
-                <div class="course-name">Actividad de<br>Vinculación<br>con entorno<br>profesional***</div>
-                <div class="course-sct">SCT: 2</div>
-            </div>
-
-            <!-- Extracurricular Row 3 (Row 12) -->
-            <div class="course-box extra-course" style="grid-column: 11; grid-row: 12;">
-                <div class="course-name">Actividades<br>Extracurriculares<br>***</div>
-                <div class="course-sct">SCT: 3</div>
-            </div>
-
-            <!-- SCT Totales Bar (Row 13) -->
-            <div class="sct-totales" style="grid-column: 1 / 12; grid-row: 13;">
-                <div class="sct-totales-content">
-                    <div>SCT Totales:</div>
-                    <div class="sct-number">330</div>
+            <!-- Contenedor de la cuadrícula de ramos -->
+            <div class="curriculum-grid">
+                <!-- Year Headers -->
+                <div class="year-header" style="grid-column: 1 / 3; grid-row: 1;">PRIMER AÑO</div>
+                <div class="year-header" style="grid-column: 3 / 5; grid-row: 1;">SEGUNDO AÑO</div>
+                <div class="year-header" style="grid-column: 5 / 7; grid-row: 1;">TERCER AÑO</div>
+                <div class="year-header" style="grid-column: 7 / 9; grid-row: 1;">CUARTO AÑO</div>
+                <div class="year-header" style="grid-column: 10 / 12; grid-row: 1;">QUINTO AÑO</div>
+                <div class="year-header" style="grid-column: 12 / 13; grid-row: 1;">SEXTO AÑO</div>
+    
+                <!-- Level Headers -->
+                <div class="level-header" style="grid-column: 1; grid-row: 2;">NIVEL 1</div>
+                <div class="level-header" style="grid-column: 2; grid-row: 2;">NIVEL 2</div>
+                <div class="level-header" style="grid-column: 3; grid-row: 2;">NIVEL 3</div>
+                <div class="level-header" style="grid-column: 4; grid-row: 2;">NIVEL 4</div>
+                <div class="level-header" style="grid-column: 5; grid-row: 2;">NIVEL 5</div>
+                <div class="level-header" style="grid-column: 6; grid-row: 2;">NIVEL 6</div>
+                <div class="level-header" style="grid-column: 7; grid-row: 2;">NIVEL 7</div>
+                <div class="level-header" style="grid-column: 8; grid-row: 2;">NIVEL 8</div>
+                <div class="level-header" style="grid-column: 10; grid-row: 2;">NIVEL 9</div>
+                <div class="level-header" style="grid-column: 11; grid-row: 2;">NIVEL 10</div>
+                <div class="level-header" style="grid-column: 12; grid-row: 2;">NIVEL 11</div>
+    
+    
+                <!-- Licenciado vertical bar -->
+                <div class="licenciado-bar" style="grid-column  : 9; grid-row: 3 / 9;">
+                    LICENCIADO EN CIENCIAS DE LA INGENIERÍA**
                 </div>
-            </div>
-
-        </div> <!-- End of Grid -->
+    
+                <!-- Nivel 11: Actividad de Titulación -->
+                <div class="titulacion-box" style="grid-column: 12; grid-row: 3 / 14;">
+                    <div class="titulacion-text">Actividad de<br>Titulación</div>
+                    <div class="course-sct">SCT: 29</div>
+                </div>
+    
+                <!-- EXTRACURRICULAR AREA -->
+    
+                <!-- Pink Outline for Extracurricular -->
+                <div class="extra-outline" style="grid-column: 1 / 12; grid-row: 10 / 14;"></div>
+    
+                <!-- Vertical Text -->
+                <div class="extra-vertical-text" style="grid-column: 1 / 3; grid-row: 10 / 13;">
+                    ACTIVIDADES EXTRACURRICULARES<br>SIN EXPRESIÓN INTRA-AULA
+                </div>
+    
+                <!-- Extracurricular Row 1 (Row 10) -->
+                <div class="course-box extra-course" style="grid-column: 3 / 5; grid-row: 10;">
+                    <div class="course-name">Inglés<br>Principiante</div>
+                </div>
+                <div class="course-box extra-course" style="grid-column: 5; grid-row: 10;">
+                    <div class="course-name">Inglés<br>Básico</div>
+                </div>
+                <div class="course-box extra-course" style="grid-column: 6; grid-row: 10;">
+                    <div class="course-name">Inglés<br>Preintermedio</div>
+                </div>
+                <div class="course-box extra-course" style="grid-column: 7; grid-row: 10;">
+                    <div class="course-name">Inglés<br>Intermedio</div>
+                </div>
+                <div class="course-box extra-course" style="grid-column: 8; grid-row: 10;">
+                    <div class="course-name">Práctica de<br>Estudios I*</div>
+                    <div class="course-sct">SCT: 6</div>
+                </div>
+                <div class="course-box extra-course" style="grid-column: 11; grid-row: 10;">
+                    <div class="course-name">Práctica de<br>Estudios II*</div>
+                    <div class="course-sct">SCT: 6</div>
+                </div>
+    
+                <!-- Extracurricular Row 2 (Row 11) -->
+                <div class="course-box extra-course" style="grid-column: 8; grid-row: 11;">
+                    <div class="course-name">Examen de<br>Suficiencia Inglés</div>
+                    <div class="course-sct">SCT: 12</div>
+                </div>
+                <div class="course-box extra-course" style="grid-column: 11; grid-row: 11;">
+                    <div class="course-name">Actividad de<br>Vinculación<br>con entorno<br>profesional***</div>
+                    <div class="course-sct">SCT: 2</div>
+                </div>
+    
+                <!-- Extracurricular Row 3 (Row 12) -->
+                <div class="course-box extra-course" style="grid-column: 11; grid-row: 12;">
+                    <div class="course-name">Actividades<br>Extracurriculares<br>***</div>
+                    <div class="course-sct">SCT: 3</div>
+                </div>
+    
+                <!-- SCT Totales Bar (Row 13) -->
+                <div class="sct-totales" style="grid-column: 1 / 12; grid-row: 13;">
+                    <div class="sct-totales-content">
+                        <div>SCT Totales:</div>
+                        <div class="sct-number">330</div>
+                    </div>
+                </div>
+    
+            </div> <!-- End of Grid -->
+        </div>
 
         <!-- Footer Notes -->
         <div class="footer-notes">

@@ -24,13 +24,16 @@ body {
 }
 
 .malla-container {
-    max-width: 1400px;
+    max-width: 100%;
     margin: 40px auto;
     background-color: white;
     padding: 30px 50px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
-
+/* Contenedor de la malla sin incluir el título */
+.contenedor-sin-titulo {
+    max-width: 78%;
+}
 /* Header Section */
 .main-header {
     display: flex;
@@ -369,3 +372,87 @@ body {
 .leader-line {
     z-index: 9999 !important;
 }
+
+        /* Las líneas quedan en una capa intermedia */
+        .leader-line, .leader-line * {
+            z-index: 50 !important;
+            pointer-events: none !important;
+        }
+
+        /* Estilo elegante para resaltar pre-requisitos */
+        .course-box {
+            position: relative; /* Necesario para que funcione z-index */
+            z-index: 100; /* Por defecto sobre las líneas */
+            transition: all 0.4s ease !important; /* Suavidad en la animación */
+        }
+
+        .course-box.dimmed {
+            z-index: 10; /* Los desenfocados se van al fondo (por debajo de las líneas) */
+            opacity: 0.25 !important;
+            filter: grayscale(90%) blur(1px) !important;
+            transform: scale(0.95) !important;
+        }
+
+        /* Panel Lateral de Descripción */
+        .info-panel {
+            position: fixed;
+            top: 0;
+            right: -400px; /* Oculto por defecto */
+            width: 350px;
+            height: 100vh;
+            background-color: white;
+            box-shadow: -4px 0 15px rgba(0,0,0,0.15);
+            z-index: 100000; /* Sobre todo */
+            transition: right 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            padding: 40px 30px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .info-panel.open {
+            right: 0;
+        }
+        .info-panel h2 {
+            margin-top: 0;
+            color: #333;
+            font-size: 22px;
+            line-height: 1.3;
+        }
+        .panel-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .info-panel .sct-badge {
+            background-color: #e91e63;
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .info-panel .prereq-badge {
+            background-color: #607d8b;
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .info-panel p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 28px;
+            color: #aaa;
+            transition: color 0.2s;
+        }
+        .close-btn:hover { color: #333; }
